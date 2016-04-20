@@ -1,0 +1,37 @@
+---
+
+- name: Installing LAMP
+  yum:
+    name={{ item }}
+    state=latest
+  with_items:
+  - httpd
+  - php
+
+- name: Create default VHost
+  template: 
+    src=etc/httpd/conf.d/000-default.conf
+    dest=/etc/httpd/conf.d/000-default.conf
+    mode=0644
+    owner=root
+    group=root
+
+- name: Switch Apache to listen 8080 port
+  replace:
+    dest=/etc/httpd/conf/httpd.conf
+    regexp='^Listen\s+80$'
+    replace='Listen 0.0.0.0:8080'
+
+
+- name: Copy web site src
+  copy:
+    src=var/www/html
+    dest=/var/www/
+    owner=apache
+    group=apache
+    mode=0755
+#    directory_mode=yes
+
+- name: Adding Apache to autoload
+  command: chkconfig httpd on
+

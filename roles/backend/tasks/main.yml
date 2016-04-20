@@ -1,0 +1,7 @@
+---
+# tasks file for backend
+- include: first_task.yml
+  when: "'backend' in {{ group_names }}"
+
+- include: install_lamp.yml
+  when: "'backend' in {{ group_names }}"

@@ -1,0 +1,11 @@
+---
+# tasks file for jenkins
+- include: first_task.yml
+  when: "'jenkins' in {{ group_names }}"
+
+- include: install_jetty.yml
+  when: "'jenkins' in {{ group_names }}"
+
+- include: install_jenkins.yml
+  when: "'jenkins' in {{ group_names }}"
+

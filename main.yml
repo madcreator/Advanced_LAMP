@@ -1,0 +1,16 @@
+---
+- hosts: all
+  user: root
+  remote_user: root
+  sudo: False
+  sudo_user: root
+
+  roles:
+    - { role: "common" }
+    - { role: "jenkins" }
+    - { role: "backend" }
+    - { role: "frontend" }
+
+  tasks:
+    - name: Final message
+      debug: msg="              !!! REBOOT YOUR SERVER TO APPLY SELINUX SETTINGS !!!"
