@@ -1,11 +1,13 @@
-Advanced_lamp (Chef)
-Several Chef recipes to install Apache+PHP and jetty+Jenkins behind of Nginx as reverse proxy
+<h1>Advanced_lamp (Chef)</h1>
+<p>Several Chef recipes to install Apache+PHP and jetty+Jenkins behind of Nginx as reverse proxy</p>
 
-Jetty - 8081/tcp - https://0.0.0.0/jenkins
-Apache - 8080/tcp
-Nginx - 80/tcp redirected to 443/tcp (self-signed cert)
+<ul>
+<li>Jetty - 8081/tcp - https://0.0.0.0/jenkins</li>
+<li>Apache - 8080/tcp</li>
+<li>Nginx - 80/tcp redirected to 443/tcp (self-signed cert)</li>
+</ul>
 
-Roles used:
+<p>Roles used:</p>
 <table><tr><td>Frontend<td>Backend<td>Jenkins</td></tr>
 <tr><td>
 <pre>
@@ -85,5 +87,5 @@ Roles used:
 backend
 jenkins
 
-Before deploy, please change domain_fqdn variable in roles.
-NOTE: Server should restarted after deployment to disable SELINUX and restart all services.
+<p>Before deploy, please change domain_fqdn variable in roles.</p>
+<p><b>NOTE: Server should restarted after deployment to disable SELINUX and restart all services.</b></p>
