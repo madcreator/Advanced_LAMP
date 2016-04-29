@@ -84,8 +84,7 @@
 </pre>
 </td></tr>
 </table>
-backend
-jenkins
+<center><img src="http://screenshots.client-demo-site.net/scn-20160429-181731-o7fwp.png"></center>
 
 <p>Before deploy, please change domain_fqdn variable in roles.</p>
 <p><b>NOTE: Server should restarted after deployment to disable SELINUX and restart all services.</b></p>
