@@ -1,6 +1,0 @@
----
-# tasks file for common
-
-- debug:
-    msg="THIS IS FIRST TASK FOR common ROLE"
-

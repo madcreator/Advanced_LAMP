@@ -1,6 +1,0 @@
----
-# tasks file for jenkins
-
-- debug:
-    msg="THIS IS FIRST TASK FOR jenkins ROLE"
-

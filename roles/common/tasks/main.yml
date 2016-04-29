@@ -1,7 +1,0 @@
----
-# tasks file for common
-- include: first_task.yml
-- include: disable_selinux.yml
-- include: upgrade_packages.yml
-- include: additional_repos.yml
-

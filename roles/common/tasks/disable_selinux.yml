@@ -1,7 +1,0 @@
----
-
-- name: Disable SELINUX (need reboot)
-  replace:
-    regexp='^SELINUX=enforcing$'
-    replace='SELINUX=disabled'
-    dest=/etc/selinux/config

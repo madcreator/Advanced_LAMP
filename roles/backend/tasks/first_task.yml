@@ -1,6 +1,0 @@
----
-# tasks file for backend
-
-- debug:
-    msg="THIS IS FIRST TASK FOR backend ROLE"
-
